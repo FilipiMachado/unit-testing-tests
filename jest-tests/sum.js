@@ -1,5 +1,6 @@
-function sum(a, b, c) {
-  return (a + b) - c;
+function minus(a, z) {
+  console.log(a, z)
+  return a - z
 }
 
-module.exports = sum;
+module.exports = minus
