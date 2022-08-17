@@ -27,7 +27,7 @@ test('mas existe "stop" em Christopher', () => {
   expect('Christopher').toMatch(/stop/);
 }) */
 
-const shoppingList = [
+/* const shoppingList = [
   'fraldas',
   'kleenex',
   'sacos de lixo',
@@ -35,7 +35,30 @@ const shoppingList = [
   'leite',
 ];
 
-test('a lista de compras tem leite nela', () => {
-  //expect(shoppingList).toContain('leite');
-  expect(new Set(shoppingList)).toContain('leite')
-})
+test('a lista de compras não tem "requeijão" nela', () => {
+  expect(shoppingList).not.toContain('requeijão');
+  //expect(new Set(shoppingList)).toContain('leite')
+}) */
+
+/* function compileAndroidCode() {
+  throw new Error('você está usando o JDK errado')
+}
+
+test('compilando para android segue conforme esperado', () => {
+  //expect(() => compileAndroidCode()).toThrow()
+  expect(() => compileAndroidCode()).toThrow(Error)
+
+  //Você também pode usar a mensagem exata de error ou uma regexp
+    //expect(() => compileAndroidCode()).toThrow('você está usando o JDK errado')
+    //expect(() => compileAndroidCode()).toThrow(/JDK/)
+}) */
+
+/* function bestWineFlavor(a) {
+  console.log(a)
+  return a
+}
+
+test('the best wine flavor is white grape', () => {
+  expect(bestWineFlavor('white grape')).toBe('white grape')
+}) */
+
