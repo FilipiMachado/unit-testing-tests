@@ -64,7 +64,7 @@ test('the best wine flavor is white grape', () => {
 
 // EXPECT.EXTEND(MATCHERS)
 
-expect.extend({
+/* expect.extend({
   toBeWithinRange(received, floor, ceiling) {
     const pass = received >= floor && received <= ceiling
     console.log(pass)
@@ -91,4 +91,32 @@ test('numeric ranges', () => {
     apples: expect.toBeWithinRange(1, 10),
     bananas: expect.not.toBeWithinRange(11, 20)
   });
+}); */
+
+// ASYNC MATCHERS
+
+expect.extend({
+  async toBeDivisibleByExternalValue(received) {
+    const externalValue = await getExternalValueFromRemoteSource();
+    const pass = received % externalValue == 0;
+    console.log(pass)
+    if (pass) {
+      return {
+        message: () =>
+          `expected ${received} not to be divisible by ${externalValue}`,
+        pass: true,
+      }
+    } else {
+      return {
+        message: () =>
+          `expected ${received} not to be divisible by ${externalValue}`,
+        pass: false,
+      };
+    }
+  },
+});
+
+test('is divisible by external value', async () => {
+  await expect(100).toBeDivisibleByExternalValue();
+  await expect(101).not.toBeDivisibleByExternalValue();
 });
