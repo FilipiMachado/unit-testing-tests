@@ -97,7 +97,7 @@ test('numeric ranges', () => {
 
 expect.extend({
   async toBeDivisibleByExternalValue(received) {
-    const externalValue = await getExternalValueFromRemoteSource();
+    const externalValue = await 100;
     const pass = received % externalValue == 0;
     console.log(pass)
     if (pass) {
