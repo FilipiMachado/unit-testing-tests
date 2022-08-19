@@ -129,9 +129,18 @@ test('dois e dois é quatro', () => {
   expect(sum(2, 2)).toBe(4)
 }) */
 
-test('atribuição de objeto', () => {
+/* test('atribuição de objeto', () => {
   const data = {one: 1}
   data['two'] = 2
+  data['three'] = 3
   console.log(data)
-  expect(data).toEqual({one: 1, two: 2})
+  expect(data).toEqual({one: 1, two: 2, three: 3})
+}) */
+
+test('adicionando números positivos não é zero', () => {
+  for (let a = 1; a < 20; a++) {
+    for (let b = 1; b < 20; b++) {
+      expect(a + b).not.toBe(0)
+    }
+  }
 })
