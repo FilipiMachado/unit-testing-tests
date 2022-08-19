@@ -95,7 +95,7 @@ test('numeric ranges', () => {
 
 // ASYNC MATCHERS
 
-expect.extend({
+/* expect.extend({
   async toBeDivisibleByExternalValue(received) {
     const externalValue = await 100;
     const pass = received % externalValue == 0;
@@ -119,4 +119,12 @@ expect.extend({
 test('is divisible by external value', async () => {
   await expect(100).toBeDivisibleByExternalValue();
   await expect(101).not.toBeDivisibleByExternalValue();
-});
+}); */
+
+function sum(a, b) {
+  return a + b
+}
+
+test('dois e dois é quatro', () => {
+  expect(sum(2, 2)).toBe(4)
+})
