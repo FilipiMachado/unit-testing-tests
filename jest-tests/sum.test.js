@@ -121,10 +121,17 @@ test('is divisible by external value', async () => {
   await expect(101).not.toBeDivisibleByExternalValue();
 }); */
 
-function sum(a, b) {
+/* function sum(a, b) {
   return a + b
 }
 
 test('dois e dois é quatro', () => {
   expect(sum(2, 2)).toBe(4)
+}) */
+
+test('atribuição de objeto', () => {
+  const data = {one: 1}
+  data['two'] = 2
+  console.log(data)
+  expect(data).toEqual({one: 1, two: 2})
 })
