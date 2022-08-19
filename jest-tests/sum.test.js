@@ -137,10 +137,17 @@ test('dois e dois é quatro', () => {
   expect(data).toEqual({one: 1, two: 2, three: 3})
 }) */
 
-test('adicionando números positivos não é zero', () => {
+/* test('adicionando números positivos não é zero', () => {
   for (let a = 1; a < 20; a++) {
     for (let b = 1; b < 20; b++) {
+      console.log(a)
+      console.log(b)
       expect(a + b).not.toBe(0)
     }
   }
+}) */
+
+test('data is peanut butter', async () => {
+  const data = await 'peanut butter'
+  expect(data).toBe('peanut butter')
 })
