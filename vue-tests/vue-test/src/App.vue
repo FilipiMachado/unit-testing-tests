@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
+    <MessageList :messages="messages"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import MessageList from './components/MessageList'
 
 export default {
-  name: 'App',
+  name: 'app',
   components: {
-    HelloWorld
+    MessageList,
+  },
+  data () {
+    return {
+      messages: ['Hey John', 'Howdy Paco']
+    }
   }
 }
 </script>
