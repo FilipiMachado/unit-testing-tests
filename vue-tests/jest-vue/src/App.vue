@@ -1,14 +1,21 @@
 <template>
   <div id="app">
-    test
+    <SearchInput v-model="search"/>
   </div>
 </template>
 
 <script>
+import SearchInput from '@/components/search-input/index.vue'
 
 export default {
   name: 'App',
   components: {
+    SearchInput,
+  },
+  data() {
+    return {
+      search: '',
+    }
   }
 }
 </script>
