@@ -1,13 +1,23 @@
 <template>
   <div id="app">
     <h1>Introduction to Vue Test Utils</h1>
+    <SearchInput v-model="search"/>
   </div>
 </template>
 
 <script>
+import SearchInput from '@/components/SearchInput.vue'
 
 export default {
   name: 'App',
+  components: {
+    SearchInput,
+  },
+  data() {
+    return {
+      search: undefined,
+    }
+  }
 }
 </script>
 
