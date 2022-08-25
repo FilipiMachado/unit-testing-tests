@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import SearchInput from '../SearchInput.vue'
+import SearchInput from '../index.vue'
 
 describe('search-input - Unit', () => {
   it('should be a vue instance', () => {
